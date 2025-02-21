@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "NYT Cooking Paywall Remover",
+  "version": "1.1",
+  "description": "Removes the paywall from NYT Cooking recipes.",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["*://cooking.nytimes.com/recipes/*"], 
+  "content_scripts": [
+    {
+      "matches": ["*://cooking.nytimes.com/recipes/*"],  
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
